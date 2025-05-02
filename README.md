@@ -14,38 +14,6 @@ The agent can understand user queries in a conversational context, retrieve rele
 *   **Modular Structure:** Code is organized into distinct modules for data loading, indexing, retrieval, agent logic, and tools.
 *   **Command-Line Interface:** Includes a simple CLI (`main_cli.py`) for interacting with the agent.
 
-## Project Structure
-customer-support-agent-rag/
-├── .github/                   # Optional: GitHub Actions Workflows
-│   └── workflows/
-│       └── python-app.yml     # CI pipeline for testing
-├── data/                      # Raw knowledge base documents (PDFs, TXT, etc.)
-│   ├── faq.txt
-│   └── ...                    
-├── src/                       # Source code
-│   ├── agent/                 # Agent core logic, prompts, tool definitions
-│   │   ├── prompts.py
-│   │   ├── support_agent.py   # Agent setup and execution
-│   │   └── tools.py           # Tool definitions
-│   ├── rag/                   # RAG-specific components
-│   │   ├── document_loader.py # Load raw documents
-│   │   ├── indexer.py         # Create vector index (e.g., FAISS)
-│   │   └── retriever.py       # Retrieve relevant documents
-│   ├── utils/                 # Utility functions
-│   │   └── config.py          # Configuration loader
-│   └── vector_store/          # Persisted vector index (e.g., FAISS)
-│       └── .gitkeep
-├── scripts/                   # Standalone scripts
-│   └── create_index.py        # Builds the vector store index
-├── tests/                     # Unit and integration tests (optional)
-├── .env.example               # Example env file for local setup
-├── .gitignore                 # Git ignore file
-├── config.yaml                # App configuration
-├── main_cli.py                # CLI entry point
-├── requirements.txt           # Python dependencies
-└── README.md                  # Project documentation
-
-
 ## Setup
 
 1.  **Clone the repository:**
