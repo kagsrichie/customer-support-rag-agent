@@ -16,34 +16,35 @@ The agent can understand user queries in a conversational context, retrieve rele
 
 ## Project Structure
 customer-support-agent-rag/
-├── .github/ # Optional: GitHub Actions Workflows
-│ └── workflows/
-│ └── python-app.yml
-├── data/ # Raw knowledge base documents (PDFs, TXT, etc.)
-│ ├── faq.txt
-│ └── ...
-├── src/ # Source code
-│ ├── agent/ # Agent core logic, prompts, tool definitions
-│ │ ├── prompts.py
-│ │ ├── support_agent.py # Agent setup and execution
-│ │ └── tools.py # Tool definitions
-│ ├── rag/ # RAG specific components
-│ │ ├── document_loader.py # Loading documents
-│ │ ├── indexer.py # Creating the vector store index
-│ │ └── retriever.py # Retrieving documents
-│ ├── utils/ # Utility functions (config loading)
-│ │ └── config.py
-│ └── vector_store/ # Persisted vector store index (e.g., FAISS files)
-│ └── .gitkeep
-├── scripts/ # Standalone scripts
-│ └── create_index.py # Script to build the vector store index
-├── tests/ # Unit and integration tests (Optional)
-├── .env.example # Example environment variables file
-├── .gitignore # Git ignore file
-├── config.yaml # Configuration settings
-├── main_cli.py # Command-Line Interface entry point
-├── requirements.txt # Python dependencies
-└── README.md # This file
+├── .github/                   # Optional: GitHub Actions Workflows
+│   └── workflows/
+│       └── python-app.yml     # CI pipeline for testing
+├── data/                      # Raw knowledge base documents (PDFs, TXT, etc.)
+│   ├── faq.txt
+│   └── ...                    
+├── src/                       # Source code
+│   ├── agent/                 # Agent core logic, prompts, tool definitions
+│   │   ├── prompts.py
+│   │   ├── support_agent.py   # Agent setup and execution
+│   │   └── tools.py           # Tool definitions
+│   ├── rag/                   # RAG-specific components
+│   │   ├── document_loader.py # Load raw documents
+│   │   ├── indexer.py         # Create vector index (e.g., FAISS)
+│   │   └── retriever.py       # Retrieve relevant documents
+│   ├── utils/                 # Utility functions
+│   │   └── config.py          # Configuration loader
+│   └── vector_store/          # Persisted vector index (e.g., FAISS)
+│       └── .gitkeep
+├── scripts/                   # Standalone scripts
+│   └── create_index.py        # Builds the vector store index
+├── tests/                     # Unit and integration tests (optional)
+├── .env.example               # Example env file for local setup
+├── .gitignore                 # Git ignore file
+├── config.yaml                # App configuration
+├── main_cli.py                # CLI entry point
+├── requirements.txt           # Python dependencies
+└── README.md                  # Project documentation
+
 
 ## Setup
 
