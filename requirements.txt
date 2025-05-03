@@ -1,0 +1,16 @@
+python-dotenv
+PyYAML
+langchain
+langchain-openai  # Or langchain-community, langchain-anthropic etc. based on LLM
+langchain-community # Often needed for loaders, vector stores etc.
+# Choose ONE vector store implementation:
+faiss-cpu         # For FAISS (use faiss-gpu if you have CUDA)
+# chromadb        # For ChromaDB
+# Choose ONE embedding model implementation if needed:
+sentence-transformers # For HuggingFace embeddings
+# tiktoken          # Often needed by OpenAI integrations
+unstructured      # For loading various document types (.pdf, .docx etc.)
+pypdf             # Specifically for PDF loading
+fastapi           # Optional: for web API
+uvicorn[standard] # Optional: ASGI server for FastAPI
+# Add any other specific dependencies (e.g., libraries for your tools' API calls)
