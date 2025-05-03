@@ -3,6 +3,8 @@
 This project implements an AI customer support assistant using a Large Language Model (LLM) combined with Retrieval-Augmented Generation (RAG) from a custom knowledge base and agentic tool usage capabilities.
 
 The agent can understand user queries in a conversational context, retrieve relevant information from internal documents (FAQs, policies, guides), and use predefined tools to perform actions like checking order status or creating support tickets.
+## Architecture
+![image](https://github.com/user-attachments/assets/1359d4b5-3dfb-4ca2-ab52-cff2206404f7)
 
 ## Features
 
